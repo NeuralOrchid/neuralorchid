@@ -10,13 +10,17 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   build-chart:
     runs-on: ubuntu-latest
 
     steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 1
+          
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
