@@ -202,7 +202,7 @@ def build_svg(counts: Dict[str, int], output: str, title: str) -> None:
     )
 
     start_angle = -90.0
-    delay = 0.22
+    delay = 1.02
     for idx, (language, value) in enumerate(items):
         color = color_for_index(idx)
 
@@ -214,7 +214,7 @@ def build_svg(counts: Dict[str, int], output: str, title: str) -> None:
 
         path_d = arc_path(cx, cy, radius, seg_start, seg_end)
         arc_len = math.radians(seg_end - seg_start) * radius
-        dur = (value / total) * 1
+        dur = (value / total) * 2
 
         svg.append(
             f'<path d="{path_d}" fill="none" stroke="{color}" '
@@ -234,7 +234,7 @@ def build_svg(counts: Dict[str, int], output: str, title: str) -> None:
         pct = (value / total) * 100.0
         y = top_y + idx * row_h
         color = color_for_index(idx)
-        begin = 0.28 + idx * 0.08
+        begin = 1.3 + idx * 0.08
 
         svg.append(
             f'<g class="legend-row" transform="translate({left_x},{y})">'
