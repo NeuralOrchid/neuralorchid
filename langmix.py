@@ -130,10 +130,10 @@ def polar_to_cartesian(cx: float, cy: float, r: float, angle_deg: float) -> Tupl
 
 
 def arc_path(cx: float, cy: float, r: float, start_deg: float, end_deg: float) -> str:
-    start_x, start_y = polar_to_cartesian(cx, cy, r, end_deg)
-    end_x, end_y = polar_to_cartesian(cx, cy, r, start_deg)
-    large_arc = 1 if (end_deg - start_deg) > 180 else 0
-    return f"M {start_x:.2f} {start_y:.2f} A {r:.2f} {r:.2f} 0 {large_arc} 0 {end_x:.2f} {end_y:.2f}"
+    end_x, end_y = polar_to_cartesian(cx, cy, r, end_deg)
+    start_x, start_y = polar_to_cartesian(cx, cy, r, start_deg)
+    large_arc = 1 if -(end_deg - start_deg) > 180 else 0
+    return f"M {start_x:.2f} {start_y:.2f} A {r:.2f} {r:.2f} 0 {large_arc} 1 {end_x:.2f} {end_y:.2f}"
 
 
 def color_for_index(index: int) -> str:
@@ -149,18 +149,18 @@ def build_svg(counts: Dict[str, int], output: str, title: str) -> None:
     total = sum(v for _, v in items)
 
     width = 960
-    height = 720
+    height = 520
     cx = 280
-    cy = 360
+    cy = height // 2
     radius = 220
-    stroke_width = 56
+    stroke_width = 37
 
     # Larger gap so rounded caps do not overlap
-    gap_deg = max(18.0, math.degrees((stroke_width / radius) * 1.25))
+    gap_deg = math.degrees((stroke_width / radius) * 1.15)
 
     left_x = 590
-    top_y = 140
-    row_h = 56
+    top_y = cy - radius
+    row_h = max(18, (radius * 2)//len(items))
 
     svg: list[str] = []
     svg.append(
@@ -202,6 +202,7 @@ def build_svg(counts: Dict[str, int], output: str, title: str) -> None:
     )
 
     start_angle = -90.0
+    delay = 0.22
     for idx, (language, value) in enumerate(items):
         color = color_for_index(idx)
 
@@ -213,7 +214,7 @@ def build_svg(counts: Dict[str, int], output: str, title: str) -> None:
 
         path_d = arc_path(cx, cy, radius, seg_start, seg_end)
         arc_len = math.radians(seg_end - seg_start) * radius
-        delay = 0.12 + idx * 0.08
+        dur = (value / total) * 1
 
         svg.append(
             f'<path d="{path_d}" fill="none" stroke="{color}" '
@@ -222,17 +223,18 @@ def build_svg(counts: Dict[str, int], output: str, title: str) -> None:
         )
         svg.append(
             f'  <animate attributeName="stroke-dashoffset" from="{arc_len:.2f}" to="0" '
-            f'dur="0.9s" begin="{delay:.2f}s" fill="freeze" />'
+            f'dur="{dur:.2f}s" begin="{delay:.2f}s" fill="freeze" />'
         )
         svg.append("</path>")
 
+        delay += dur
         start_angle = seg_end + gap_deg / 2.0
 
     for idx, (language, value) in enumerate(items):
         pct = (value / total) * 100.0
         y = top_y + idx * row_h
         color = color_for_index(idx)
-        begin = 0.18 + idx * 0.07
+        begin = 0.28 + idx * 0.08
 
         svg.append(
             f'<g class="legend-row" transform="translate({left_x},{y})">'
