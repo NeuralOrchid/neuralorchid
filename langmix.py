@@ -50,21 +50,22 @@ SPECIAL_FILES = {
 }
 
 PALETTE = [
-    "#f7df1e",
-    "#3178c6",
-    "#00add8",
-    "#3776ab",
-    "#b07219",
-    "#178600",
-    "#c6538c",
-    "#4f5d95",
-    "#dea584",
-    "#a97bff",
-    "#ff6b6b",
-    "#22c55e",
-    "#06b6d4",
-    "#8b5cf6",
-    "#f97316",
+    "#414447",
+    "#6B6983",
+    "#515B62",
+    "#717F7E",
+    "#BBBBAB",
+    "#4F5758",
+    "#798986",
+    "#504F6C",
+    "#859887",
+    "#64625A",
+    "#605557",
+    "#928E87",
+    "#97807E",
+    "#556055",
+    "#94817C",
+    "#BDBDAD",
 ]
 
 
@@ -202,7 +203,7 @@ def build_svg(counts: Dict[str, int], output: str, title: str) -> None:
     )
 
     start_angle = -90.0
-    delay = 1.02
+    delay = 0.3
     for idx, (language, value) in enumerate(items):
         color = color_for_index(idx)
 
@@ -227,14 +228,14 @@ def build_svg(counts: Dict[str, int], output: str, title: str) -> None:
         )
         svg.append("</path>")
 
-        delay += dur
+        delay += dur * 0.8
         start_angle = seg_end + gap_deg / 2.0
 
     for idx, (language, value) in enumerate(items):
         pct = (value / total) * 100.0
         y = top_y + idx * row_h
         color = color_for_index(idx)
-        begin = 1.3 + idx * 0.08
+        begin = 0.3 + idx * 0.18
 
         svg.append(
             f'<g class="legend-row" transform="translate({left_x},{y})">'
