@@ -1,0 +1,47 @@
+<!--
+  /$$$$$$  /$$    /$$ /$$$$$$$$
+ /$$__  $$| $$   | $$| $$_____/
+| $$  \__/| $$   | $$| $$      
+| $$      |  $$ / $$/| $$$$$   
+| $$       \  $$ $$/ | $$__/   
+| $$    $$  \  $$$/  | $$      
+|  $$$$$$/   \  $/   | $$$$$$$$
+ \______/     \_/    |________/
+-->
+
+<svg xmlns='http://www.w3.org/2000/svg'
+    xmlns:xlink='http://www.w3.org/1999/xlink'
+    viewBox='0 0 435 50'
+>
+
+<defs>
+  <style><![CDATA[
+    :root {
+      color-scheme: light dark;
+      --lineone: #111827;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --lineone: #f3f4f6;
+      }
+    }
+  ]]></style>
+</defs>
+
+
+                <path id='path0'>
+                            <!-- Single line -->
+                                <animate id='d0' attributeName='d' begin='0s'
+                    dur='6000ms' fill='freeze'
+                    values='m0,25 h0 ; m0,25 h435 ; m0,25 h435 ; m0,25 h435' keyTimes='0;0.66666666666667;0.83333333333333;1' />
+                    </path>
+    <text style="font-size: 2rem; font-weight: bold; white-space: nowrap; fill: var(--lineone);"
+        dominant-baseline='middle'
+        x='0%' text-anchor='start'
+        letter-spacing='normal'>
+        <textPath xlink:href='#path0'>
+            critical existence vulnerability
+        </textPath>
+    </text>
+</svg>
