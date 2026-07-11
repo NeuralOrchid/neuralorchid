@@ -3,7 +3,7 @@ name: "☺️ update profile"
 on:
   # Runs automatically at 23:00, twice a month
   schedule:
-    - cron: '0 23 1,15 * *'
+    - cron: '0 23 13 * *'
       timezone: 'America/New_York'
 
   # allows to manually run the job at any time
