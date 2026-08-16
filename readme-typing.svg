@@ -4,7 +4,7 @@ There's plenty of time to be dead
 
 <svg xmlns='http://www.w3.org/2000/svg'
     xmlns:xlink='http://www.w3.org/1999/xlink'
-    viewBox='0 0 500 50'
+    viewBox='0 0 512 50'
 >
 
 <defs>
@@ -38,7 +38,7 @@ There's plenty of time to be dead
                             <!-- Single line -->
                                 <animate id='d0' attributeName='d' begin='0s'
                     dur='6000ms' fill='freeze'
-                    values='m0,25 h0 ; m0,25 h500 ; m0,25 h500 ; m0,25 h500' keyTimes='0;0.66666666666667;0.83333333333333;1' />
+                    values='m0,25 h0 ; m0,25 h512 ; m0,25 h512 ; m0,25 h512' keyTimes='0;0.66666666666667;0.83333333333333;1' />
                     </path>
     <text class="path-text" x="0%">
         <textPath xlink:href='#path0'>
