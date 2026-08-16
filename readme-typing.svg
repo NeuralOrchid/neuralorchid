@@ -1,12 +1,5 @@
 <!--
-  /$$$$$$  /$$    /$$ /$$$$$$$$
- /$$__  $$| $$   | $$| $$_____/
-| $$  \__/| $$   | $$| $$      
-| $$      |  $$ / $$/| $$$$$   
-| $$       \  $$ $$/ | $$__/   
-| $$    $$  \  $$$/  | $$      
-|  $$$$$$/   \  $/   | $$$$$$$$
- \______/     \_/    |________/
+There's plenty of time to be dead
 -->
 
 <svg xmlns='http://www.w3.org/2000/svg'
@@ -49,7 +42,7 @@
                     </path>
     <text class="path-text" x="0%">
         <textPath xlink:href='#path0'>
-            critical existence vulnerability
+            There's plenty of time to be dead
         </textPath>
     </text>
 </svg>
