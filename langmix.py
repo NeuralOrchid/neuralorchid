@@ -266,7 +266,7 @@ def main() -> None:
         description="Generate a transparent animated SVG doughnut chart from GitHub commit languages."
     )
     parser.add_argument("--author", default=os.environ.get("AUTHOR") or os.environ.get("GITHUB_ACTOR"))
-    parser.add_argument("--max-commits", type=int, default=int(os.environ.get("MAX_COMMITS", "200")))
+    parser.add_argument("--max-commits", type=int, default=int(os.environ.get("MAX_COMMITS", "1000")))
     parser.add_argument("--output", default=os.environ.get("OUTPUT", "language-donut.svg"))
     parser.add_argument("--title", default=os.environ.get("TITLE", "Commit language mix"))
     args = parser.parse_args()
