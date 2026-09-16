@@ -3,4 +3,6 @@
   <img src="https://raw.githubusercontent.com/NeuralOrchid/neuralorchid/main/Cat%20-%20Jun%2026%2C%202026.png" style="width: 10%;" />
 </div>
 
+TODO: Fix the doughnut
+
 ![](https://raw.githubusercontent.com/NeuralOrchid/neuralorchid/output/lang-doughnut.svg)
