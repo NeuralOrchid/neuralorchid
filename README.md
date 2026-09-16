@@ -3,6 +3,7 @@
   <img src="https://raw.githubusercontent.com/NeuralOrchid/neuralorchid/main/Cat%20-%20Jun%2026%2C%202026.png" style="width: 10%;" />
 </div>
 
-TODO: Fix the doughnut
+> [!WARNING]
+> Fix the issue with doughnut. It's not a feature, it's a bloody bug
 
 ![](https://raw.githubusercontent.com/NeuralOrchid/neuralorchid/output/lang-doughnut.svg)
