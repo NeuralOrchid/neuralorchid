@@ -107,6 +107,7 @@ def search_commits(session: requests.Session, author: str, max_commits: int) -> 
         )
         items = resp.json().get("items", [])
         if not items:
+            print(f"\n----------\nseen:{seen}\nmax_commits:{max_commits}\n----------\n")
             break
 
         for item in items:
@@ -115,6 +116,7 @@ def search_commits(session: requests.Session, author: str, max_commits: int) -> 
             yield repo_full_name, sha
             seen += 1
             if seen >= max_commits:
+                print(f"\n----------\nseen:{seen}\nmax_commits:{max_commits}\n----------\n")
                 return
 
         page += 1
@@ -289,6 +291,7 @@ def main() -> None:
     )
 
     counts = collections.Counter()
+    print("args.max_commits:",args.max_commits)
 
     for full_name, sha in search_commits(session, args.author, args.max_commits):
         detail = get_commit(session, full_name, sha)
