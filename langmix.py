@@ -101,7 +101,7 @@ def search_commits(session: requests.Session, author: str, max_commits: int) -> 
                 "q": f"author:{author}",
                 "sort": "author-date",
                 "order": "desc",
-                "per_page": min(100, max_commits - seen),
+                "per_page": 100,
                 "page": page,
             },
         )
