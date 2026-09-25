@@ -101,13 +101,12 @@ def search_commits(session: requests.Session, author: str, max_commits: int) -> 
                 "q": f"author:{author}",
                 "sort": "author-date",
                 "order": "desc",
-                "per_page": min(200, max_commits - seen),
+                "per_page": min(128, max_commits - seen),
                 "page": page,
             },
         )
         items = resp.json().get("items", [])
         if not items:
-            print(f"\n----------\nseen:{seen}\nmax_commits:{max_commits}\n----------\n")
             break
 
         for item in items:
@@ -116,7 +115,6 @@ def search_commits(session: requests.Session, author: str, max_commits: int) -> 
             yield repo_full_name, sha
             seen += 1
             if seen >= max_commits:
-                print(f"\n----------\nseen:{seen}\nmax_commits:{max_commits}\n----------\n")
                 return
 
         page += 1
@@ -268,7 +266,7 @@ def main() -> None:
         description="Generate a transparent animated SVG doughnut chart from GitHub commit languages."
     )
     parser.add_argument("--author", default=os.environ.get("AUTHOR") or os.environ.get("GITHUB_ACTOR"))
-    parser.add_argument("--max-commits", type=int, default=int(os.environ.get("MAX_COMMITS", "1000")))
+    parser.add_argument("--max-commits", type=int, default=300)
     parser.add_argument("--output", default=os.environ.get("OUTPUT", "language-donut.svg"))
     parser.add_argument("--title", default=os.environ.get("TITLE", "Commit language mix"))
     args = parser.parse_args()
