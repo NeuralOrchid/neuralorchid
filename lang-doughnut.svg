@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="520" viewBox="0 0 960 520" role="img" aria-label="Commit language mix">
+<defs>
+  <style><![CDATA[
+    :root {
+      color-scheme: light dark;
+      --label: #111827;
+      --value: #374151;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --label: #f3f4f6;
+        --value: #d1d5db;
+      }
+    }
+
+    .label {
+      font: 600 22px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      fill: var(--label);
+    }
+    .value {
+      font: 500 18px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      fill: var(--value);
+    }
+    .legend-row {
+      opacity: 0;
+    }
+  ]]></style>
+</defs>
+<path d="M 61.03 238.76 A 220.00 220.00 0 0 1 477.83 163.75" fill="none" stroke="#414447" stroke-width="37" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="570.25 570.25" stroke-dashoffset="570.25">
+  <animate attributeName="stroke-dashoffset" from="570.25" to="0" dur="1.19s" begin="0.30s" fill="freeze" />
+</path>
+<path d="M 492.64 203.57 A 220.00 220.00 0 0 1 495.15 305.92" fill="none" stroke="#6B6983" stroke-width="37" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="103.33 103.33" stroke-dashoffset="103.33">
+  <animate attributeName="stroke-dashoffset" from="103.33" to="0" dur="0.22s" begin="1.25s" fill="freeze" />
+</path>
+<path d="M 482.32 346.42 A 220.00 220.00 0 0 1 427.07 423.62" fill="none" stroke="#515B62" stroke-width="37" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="95.68 95.68" stroke-dashoffset="95.68">
+  <animate attributeName="stroke-dashoffset" from="95.68" to="0" dur="0.20s" begin="1.43s" fill="freeze" />
+</path>
+<path d="M 392.88 448.83 A 220.00 220.00 0 0 1 354.91 466.86" fill="none" stroke="#717F7E" stroke-width="37" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="42.10 42.10" stroke-dashoffset="42.10">
+  <animate attributeName="stroke-dashoffset" from="42.10" to="0" dur="0.09s" begin="1.59s" fill="freeze" />
+</path>
+<path d="M 313.75 477.40 A 220.00 220.00 0 0 1 279.44 480.00" fill="none" stroke="#BBBBAB" stroke-width="37" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="34.44 34.44" stroke-dashoffset="34.44">
+  <animate attributeName="stroke-dashoffset" from="34.44" to="0" dur="0.07s" begin="1.66s" fill="freeze" />
+</path>
+<path d="M 237.16 475.79 A 220.00 220.00 0 0 1 207.64 467.76" fill="none" stroke="#4F5758" stroke-width="37" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="30.62 30.62" stroke-dashoffset="30.62">
+  <animate attributeName="stroke-dashoffset" from="30.62" to="0" dur="0.06s" begin="1.71s" fill="freeze" />
+</path>
+<path d="M 169.06 449.98 A 220.00 220.00 0 0 1 149.87 437.39" fill="none" stroke="#798986" stroke-width="37" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="22.96 22.96" stroke-dashoffset="22.96">
+  <animate attributeName="stroke-dashoffset" from="22.96" to="0" dur="0.05s" begin="1.77s" fill="freeze" />
+</path>
+<path d="M 118.20 409.07 A 220.00 220.00 0 0 1 105.86 394.45" fill="none" stroke="#504F6C" stroke-width="37" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="19.14 19.14" stroke-dashoffset="19.14">
+  <animate attributeName="stroke-dashoffset" from="19.14" to="0" dur="0.04s" begin="1.80s" fill="freeze" />
+</path>
+<path d="M 83.27 358.47 A 220.00 220.00 0 0 1 75.46 341.01" fill="none" stroke="#859887" stroke-width="37" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="19.14 19.14" stroke-dashoffset="19.14">
+  <animate attributeName="stroke-dashoffset" from="19.14" to="0" dur="0.04s" begin="1.84s" fill="freeze" />
+</path>
+<path d="M 63.70 300.18 A 220.00 220.00 0 0 1 61.03 281.24" fill="none" stroke="#64625A" stroke-width="37" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="19.14 19.14" stroke-dashoffset="19.14">
+  <animate attributeName="stroke-dashoffset" from="19.14" to="0" dur="0.04s" begin="1.87s" fill="freeze" />
+</path>
+<g class="legend-row" transform="translate(590,40)">
+  <animate attributeName="opacity" from="0" to="1" dur="0.25s" begin="0.30s" fill="freeze" />
+  <rect x="0" y="0" width="18" height="18" rx="6" ry="6" fill="#414447" />
+  <text x="30" y="16" class="label">Python</text>
+  <text x="250" y="16" class="value">59.6%</text>
+</g>
+<g class="legend-row" transform="translate(590,84)">
+  <animate attributeName="opacity" from="0" to="1" dur="0.25s" begin="0.48s" fill="freeze" />
+  <rect x="0" y="0" width="18" height="18" rx="6" ry="6" fill="#6B6983" />
+  <text x="30" y="16" class="label">Rust</text>
+  <text x="250" y="16" class="value">10.8%</text>
+</g>
+<g class="legend-row" transform="translate(590,128)">
+  <animate attributeName="opacity" from="0" to="1" dur="0.25s" begin="0.66s" fill="freeze" />
+  <rect x="0" y="0" width="18" height="18" rx="6" ry="6" fill="#515B62" />
+  <text x="30" y="16" class="label">HTML</text>
+  <text x="250" y="16" class="value">10.0%</text>
+</g>
+<g class="legend-row" transform="translate(590,172)">
+  <animate attributeName="opacity" from="0" to="1" dur="0.25s" begin="0.84s" fill="freeze" />
+  <rect x="0" y="0" width="18" height="18" rx="6" ry="6" fill="#717F7E" />
+  <text x="30" y="16" class="label">JavaScript</text>
+  <text x="250" y="16" class="value">4.4%</text>
+</g>
+<g class="legend-row" transform="translate(590,216)">
+  <animate attributeName="opacity" from="0" to="1" dur="0.25s" begin="1.02s" fill="freeze" />
+  <rect x="0" y="0" width="18" height="18" rx="6" ry="6" fill="#BBBBAB" />
+  <text x="30" y="16" class="label">C</text>
+  <text x="250" y="16" class="value">3.6%</text>
+</g>
+<g class="legend-row" transform="translate(590,260)">
+  <animate attributeName="opacity" from="0" to="1" dur="0.25s" begin="1.20s" fill="freeze" />
+  <rect x="0" y="0" width="18" height="18" rx="6" ry="6" fill="#4F5758" />
+  <text x="30" y="16" class="label">YAML</text>
+  <text x="250" y="16" class="value">3.2%</text>
+</g>
+<g class="legend-row" transform="translate(590,304)">
+  <animate attributeName="opacity" from="0" to="1" dur="0.25s" begin="1.38s" fill="freeze" />
+  <rect x="0" y="0" width="18" height="18" rx="6" ry="6" fill="#798986" />
+  <text x="30" y="16" class="label">Go</text>
+  <text x="250" y="16" class="value">2.4%</text>
+</g>
+<g class="legend-row" transform="translate(590,348)">
+  <animate attributeName="opacity" from="0" to="1" dur="0.25s" begin="1.56s" fill="freeze" />
+  <rect x="0" y="0" width="18" height="18" rx="6" ry="6" fill="#504F6C" />
+  <text x="30" y="16" class="label">C++</text>
+  <text x="250" y="16" class="value">2.0%</text>
+</g>
+<g class="legend-row" transform="translate(590,392)">
+  <animate attributeName="opacity" from="0" to="1" dur="0.25s" begin="1.74s" fill="freeze" />
+  <rect x="0" y="0" width="18" height="18" rx="6" ry="6" fill="#859887" />
+  <text x="30" y="16" class="label">Makefile</text>
+  <text x="250" y="16" class="value">2.0%</text>
+</g>
+<g class="legend-row" transform="translate(590,436)">
+  <animate attributeName="opacity" from="0" to="1" dur="0.25s" begin="1.92s" fill="freeze" />
+  <rect x="0" y="0" width="18" height="18" rx="6" ry="6" fill="#64625A" />
+  <text x="30" y="16" class="label">CSS</text>
+  <text x="250" y="16" class="value">2.0%</text>
+</g>
+</svg>
