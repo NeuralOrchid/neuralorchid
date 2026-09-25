@@ -304,6 +304,10 @@ def main() -> None:
             if language:
                 counts[language] += 1
 
+    print("\n\n--------------------------------------------------\n")
+    print(dict(counts))
+    print("\n--------------------------------------------------\n\n")
+    
     build_svg(dict(counts), args.output, args.title)
 
 
