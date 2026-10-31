@@ -33,6 +33,7 @@ LANGUAGE_RULES = [
     (("*.css",), "CSS"),
     (("*.yml", "*.yaml"), "YAML"),
     (("*.json",), "JSON"),
+    (("*.tex", "*.latex", "*.ltx", "*.sty", "*.cls", "*.bib", "*.bst"), "LaTeX"),
 ]
 
 SPECIAL_FILES = {
@@ -47,6 +48,8 @@ SPECIAL_FILES = {
     "tsconfig.json": "TypeScript",
     "Pipfile": "Python",
     "requirements.txt": "Python",
+    "latexmkrc": "LaTeX",
+    ".latexmkrc": "LaTeX",
 }
 
 PALETTE = [
